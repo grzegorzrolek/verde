@@ -1,0 +1,69 @@
+Verde, the letterforms
+======================
+
+These are the source files of the letterforms I have drawn for use in a
+brand identity work I took part in a while back. You can build an
+OpenType binary with those files, though it probably won't be a very
+useful font. Still, you may want to look into the curves, or use the
+files otherwise.
+
+
+Requirements
+------------
+
+You will need [Type 1 Utilities](http://lcdf.org/type/#t1utils) and
+[Adobe FDK](http://adobe.com/devnet/opentype/afdko/) to build the font
+binary.
+
+If you plan to make changes to the source file, you may also want to
+have [LCDF Typetools](http://lcdf.org/type/#typetools) installed for its
+simple lint as well as proofing utility for Type 1 font files.
+
+
+Build
+-----
+
+Provided you have the required utilities installed, run `make`, and it
+will do the necessary steps to produce an OpenType binary.
+
+
+Editing
+-------
+
+The source file is a bare PostScript Type 1 font program, which makes it
+convenient to process and version properly, but it also means that no
+font editor can currently read the file directly. It has to be assembled
+into a proper Type 1 font first:
+
+    make font.pfa
+
+Note that this is the intermediate file used to produce the target
+OpenType binary as well, and that you could, in fact, edit the OpenType
+file instead. Nevertheless, Type 1 is a format better suited for
+modification as far as the outlines are concerned, because it can be
+easily converted back and forth into a PostScript language program
+without any loss of data. Type 1 format, while relatively basic, is also
+mature and stable enough for any professional font software to read and
+write without any difficulties.
+
+You can open such Type 1 font in a font editor, make the necessary
+edits, and overwrite it. If you're done with the changes, make sure you
+disassemble it back into its PostScript language program:
+
+    make font.ps
+
+Running `make` at any stage will produce the target OpenType font binary
+from either the PostScript source or the assembled Type 1 font file,
+whichever appears to have changed last. Note, however, that any changes
+made to the latter that have not been disassembled would get overwritten
+if the source file were somehow modified behind the scenes. If such
+conflict should ever occur, the build chain will stop short before any
+potentially destructive operation on both assembly and disassembly.
+
+
+Copyright
+---------
+
+This work was done by Grzegorz Rolek, 2013. Copyrights apply. Subject to
+SIL Open Font License, Version 1.1; see LICENSE for details.
+
