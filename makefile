@@ -3,7 +3,7 @@
 # Subject to the BSD 3-Clause License
 
 
-build/Verde.otf: font.pfa | build
+build/Verde.otf: font.pfa features | build
 	makeotf -f $< -o $@
 
 build:

@@ -1,0 +1,29 @@
+# OpenType feature file for Verde the logotype
+# Copyright 2015 Grzegorz Rolek
+
+
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+
+# The feature below allows for the input phrase to be typed with a title case.
+# Note, though, that it explicitly rejects any kind of mixed case other than
+# that. This helps to keep the underlying text in a properly capitalized form.
+
+lookup CAP {
+	sub d by D;
+	sub e by E;
+	sub r by R;
+} CAP;
+
+@ANY = [D E R V];
+
+feature calt {
+	sub V e' lookup CAP r' lookup CAP d' lookup CAP e' lookup CAP;
+	ignore sub V e' r' d' @ANY;
+	sub V e' lookup CAP r' lookup CAP d' lookup CAP;
+	ignore sub V e' r' @ANY;
+	sub V e' lookup CAP r' lookup CAP;
+	ignore sub V e' @ANY;
+	sub V e' lookup CAP;
+} calt;
+
