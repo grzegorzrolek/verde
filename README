@@ -1,11 +1,27 @@
-Verde, the letterforms
-======================
+Verde, a logotype
+=================
 
 These are the source files of the letterforms I have drawn for use in a
 brand identity work I took part in a while back. You can build an
 OpenType binary with those files, though it probably won't be a very
 useful font. Still, you may want to look into the curves, or use the
 files otherwise.
+
+
+Design
+------
+
+The letters have their form based on the _littera capitalis
+monumentalis_, the famous Roman capital. The style of the stroke itself,
+though, is as monolinear as the optical adjustments allow.
+
+Elementary as it may seem, this blend is more tricky than one would
+think. Despite carrying plenty of calligraphic subtleties, the Imperial
+inscriptions are often falsely perceived as having a strictly geometric
+framework. Monolinear stroke only reinforces this presumption. It takes
+a fair amount of care to have it drawn in a way that does not lose nor
+exaggerate too much of the hand movement characteristic of a fine Roman
+letter.
 
 
 Requirements

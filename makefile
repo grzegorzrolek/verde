@@ -1,4 +1,4 @@
-# Makefile for Verde letterforms project directory
+# Makefile for Verde the logotype project directory
 # Copyright 2015 Grzegorz Rolek
 # Subject to the BSD 3-Clause License
 
