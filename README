@@ -27,13 +27,13 @@ letter.
 Requirements
 ------------
 
-You will need [Type 1 Utilities](http://lcdf.org/type/#t1utils) and
+You will need [Type 1 Utilities](http://www.lcdf.org/type/#t1utils) and
 [Adobe FDK](http://adobe.com/devnet/opentype/afdko/) to build the font
 binary.
 
 If you plan to make changes to the source file, you may also want to
-have [LCDF Typetools](http://lcdf.org/type/#typetools) installed for its
-simple lint as well as proofing utility for Type 1 font files.
+have [LCDF Typetools](http://www.lcdf.org/type/#typetools) installed for
+its simple lint as well as proofing utility for Type 1 font files.
 
 
 Build
